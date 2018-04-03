@@ -1,7 +1,0 @@
-#!/usr/bin/python
-
-import imaplib
-obj = imaplib.IMAP4_SSL('mail.talkinarabic.com',143)
-obj.login('accounts@talkinarabic.com','password') # write your email and password
-obj.select()
-print(len(obj.search(None, 'UnSeen')[1][0].split()))
