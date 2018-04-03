@@ -1,0 +1,8 @@
+#!/bin/bash
+if [ "$(playerctl status)" = "Playing" ]; then
+  title=`exec playerctl metadata xesam:title`
+  artist=`exec playerctl metadata xesam:artist`
+  echo -e "%{F#65737E}| %{F#a8db76}  %{F#b98fe3}$title - %{F#D08770}$artist %{F#65737E}|"
+else
+  echo ""
+fi

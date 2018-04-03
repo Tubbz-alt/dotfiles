@@ -1,0 +1,10 @@
+#!/bin/bash
+. "/home/donovan/.cache/wal/colors.sh"
+
+if [ "$(playerctl status)" = "Playing" ]; then
+  title=`exec playerctl metadata xesam:title`
+  artist=`exec playerctl metadata xesam:artist`
+  echo -e "%{F$color6}| %{F$color2}  %{F$color6}$title - %{F$color2}$artist %{F$color6}|"
+else
+  echo ""
+fi
